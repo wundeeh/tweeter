@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  background-color: #4056A1;
+  color: white;
+  font-family: 'Bungee';
+  height: 120px;
+  padding: 0 1.5em;
+  position: fixed;
+  width: 100%;
+}
+
+.brandName {
+  display: flex;
+  font-size: 1.5em;
+  padding-top: 65px;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.writeNewTweet {
+  font-family: 'Source Sans Pro';
+  padding-top: 40px;
+  position: absolute;
+  right: 1.5em;
+}
+
+.doubleDownArrow {
+  color: red;
+  position: absolute;
+  right: 4.5em;
+  padding-top: 75px;
+}
