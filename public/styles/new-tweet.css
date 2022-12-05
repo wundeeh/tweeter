@@ -1,0 +1,32 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  margin-top: 2em;
+  margin-bottom: 1em;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.newTweetTop {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid;
+  font-weight: 600;
+}
+
+.newTweetBottom {
+  font-family: "Bungee";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.tweetButton {
+  background-color: #4056A1;
+  color: white;
+}
