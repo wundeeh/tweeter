@@ -3,34 +3,10 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "________If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+const tweetData = [];
 
 function renderTweets(tweets) {
   for (let i = 0; i < tweets.length; i++) {
-    console.log(tweets[i]);
     const newTweet = createTweetElement(tweets[i]);
     $('.tweets').append(newTweet);
   }
@@ -53,7 +29,7 @@ function createTweetElement(tweet) {
           </div>
           <hr class="breakLine">
           <div class="tweetFooter">
-            <p>${tweet.created_at}</p>
+            <p>${timeago.format(tweet.created_at)}</p>
             <div class="icons">
               <i class="fa-solid fa-flag flag"></i>
               <i class="fa-solid fa-retweet retweet"></i>
