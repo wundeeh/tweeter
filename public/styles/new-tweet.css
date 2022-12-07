@@ -10,6 +10,17 @@ section {
   margin-right: 2.5%;
 }
 
+.errorText {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 5px solid red;
+  color: red;
+  display: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 .newTweetTop {
   display: flex;
   flex-direction: column;
