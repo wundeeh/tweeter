@@ -12,7 +12,7 @@ const tweetData = [
       "handle": "@SirIsaac"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "________If I have seen further it is by standing on the shoulders of giants"
     },
     "created_at": 1461116232227
   },
@@ -67,14 +67,26 @@ function createTweetElement(tweet) {
   return markup;
 }
 
+function tweetLoader() {
+  $.get( "/tweets", function( data ) {
+   renderTweets(data);
+  });
+
+}
+
 
 $(document).ready(function() {
 
-// Test / driver code (temporary)
-const $tweets = renderTweets(tweetData);
-console.log("tweet:--------------------------->", $tweets); // to see what it looks like
-$('.tweets').append($tweets); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-//const $tweet = createTweetElement(tweetData);
+tweetLoader();
+
+$(".tweetSend").submit( function(event) {
+  event.preventDefault();
+  const payload = $(this).serialize();
+
+  $.post("/tweets",
+  payload,
+);
+})
 
 });
 
