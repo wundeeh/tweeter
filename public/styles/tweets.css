@@ -26,10 +26,6 @@
   display: flex;
 }
 
-.tweetProfilePicture {
-  width: 10%;
-}
-
 .userName {
   display: flex;
   margin-left: 2em;
