@@ -1,8 +1,8 @@
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4056A1;
+  background-color: #f49444;
   color: white;
   height: 120px;
   padding: 0 1.5em;
@@ -28,3 +28,9 @@ nav {
   right: 4.5em;
   padding-top: 60px;
 }
+
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    background-color: #4056A1;
+  }
+} 
