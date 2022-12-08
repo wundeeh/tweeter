@@ -33,42 +33,44 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="navbar">
       <span class="brandName">tweeter</span>
       <span class="writeNewTweet"><strong>Write</strong> a new tweet</span>
       <i class="fa-solid fa-angles-down doubleDownArrow"></i>
     </nav>
 
-    <header>
-      <div>
-        <img class="profilePic" src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-        <h2 class="name"><strong>Your</strong> name</h2>
-      </div>
-    </header>
+    <div class="website-body">
+      <header class="profile">
+        <div>
+          <img class="profilePic" src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+          <h2 class="name"><strong>Landon</strong> Smith</h2>
+        </div>
+      </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form class="tweetSend">
-          <div class='errorText'></div>
-          <div class="newTweetTop">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
-          </div>
-          <div class="newTweetBottom">
-            <button class="tweetButton" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
+      <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form class="tweetSend">
+            <div class='errorText'></div>
+            <div class="newTweetTop">
+              <label for="tweet-text">What are you humming about?</label>
+              <textarea name="text" id="tweet-text"></textarea>
+            </div>
+            <div class="newTweetBottom">
+              <button class="tweetButton" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
 
-      <section class="tweets">
+        <section class="tweets">
 
-      </section>
-    </main>
+        </section>
+      </main>
+  </div>
   </body>
 </html>
