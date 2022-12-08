@@ -1,4 +1,4 @@
-header {
+.profile {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,4 +16,20 @@ header {
 
 .profilePic {
   margin-top: 90px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .profile {
+  float: left;
+  width: 33.3%;
+  margin-left: 2em;
+  margin-top: 10em;
+  height: 450px;
+  }
+
+  .profilePic {
+  margin-top: 60px;
+  }
+
 }
