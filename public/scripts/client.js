@@ -72,7 +72,7 @@ $(".tweetSend").submit( function(event) {
   }
 
   if ($(this).children(".newTweetTop").children("#tweet-text").val().length > 140) {
-    return $('.errorText').text('Your Tweet exceeds the maximum characters').slideDown();
+    return $('.errorText').text('Your Tweet exceeds the maximum character limit').slideDown();
   }
   
   const payload = $(this).serialize();
