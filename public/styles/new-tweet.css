@@ -1,4 +1,4 @@
-section {
+.new-tweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,4 +40,18 @@ section {
 .tweetButton {
   background-color: #4056A1;
   color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .container {
+    width: 50%;
+    float: left;
+    margin-top: 160px;
+  }
+
+  .tweets {
+    width: 100%;
+    margin-left: 1em;
+  }
 }
