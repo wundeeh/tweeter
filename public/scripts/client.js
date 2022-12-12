@@ -3,28 +3,19 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+// Tweet Data goes here
 const tweetData = [];
 
-
+// Secures the text field by preventing any code from running in it
 const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-
-function renderTweets(tweets) {
-  $(".tweets").empty();
-  for (let i = 0; i < tweets.length; i++) {
-    const newTweet = createTweetElement(tweets[i]);
-    $('.tweets').append(newTweet);
-    
-  }
-}
-
+// Takes in the input of a tweet and puts it into HTML form 
 function createTweetElement(tweet) {
-
-
   const markup = `
   <article class="tweet">
           <div class="tweetHeader">
@@ -49,10 +40,20 @@ function createTweetElement(tweet) {
         </article>
   `;
 
-  //console.log(markup);
   return markup;
 }
 
+// Goes through an array of tweets and uses createTweetElement to put them into HTML
+function renderTweets(tweets) {
+  $(".tweets").empty();
+  for (let i = 0; i < tweets.length; i++) {
+    const newTweet = createTweetElement(tweets[i]);
+    $('.tweets').append(newTweet);
+    
+  }
+}
+
+// Renders the tweets on the page
 function tweetLoader() {
   $.get( "/tweets", function( data ) {
    renderTweets(data);
@@ -61,9 +62,10 @@ function tweetLoader() {
 
 
 $(document).ready(function() {
-
+// Loads the existant tweets
 tweetLoader();
 
+// Starts the new tweet creation process
 $(".tweetSend").submit( function(event) {
   event.preventDefault();
   
@@ -75,11 +77,13 @@ $(".tweetSend").submit( function(event) {
     return $('.errorText').text('Your Tweet exceeds the maximum character limit').slideDown();
   }
   
+  // Posts the tweet
   const payload = $(this).serialize();
   $.post("/tweets", payload).then(function() {
     $(".errorText").slideUp();
     
     tweetLoader();
+    $('#tweet-text').val('');
   })
 })
 
